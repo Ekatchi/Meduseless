@@ -16,7 +16,7 @@ public class MainRunner {
 
     public static void main(String[] args) {
 		Scanner diddleboard = new Scanner(System.in);
-		String token = diddleboard.nextLine(); //Should be token.
+		String token  = System.getenv("bot_token");
 		try {
 			IDiscordClient cli = BotUtils.getBuiltDiscordClient(token);
 
