@@ -53,7 +53,7 @@
                     <manifest>
                         <addClasspath>true</addClasspath>
                         <classpathPrefix>lib/</classpathPrefix>
-                        <mainClass>src.main.java.MainRunner</mainClass>
+                        <mainClass>MainRunner</mainClass>
                     </manifest>
                 </archive>
             </configuration>
