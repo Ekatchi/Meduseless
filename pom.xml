@@ -43,28 +43,21 @@
 
 <build>
     <plugins>
-    <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.1</version>
-        <executions>
-            <!-- Run shade goal on package phase -->
-            <execution>
-                <phase>package</phase>
-                <goals>
-                    <goal>shade</goal>
-                </goals>
-                <configuration>
-                    <transformers>
-                        <!-- add Main-Class to manifest file -->
-                        <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>MainRunner</mainClass>
-                        </transformer>
-                    </transformers>
-                </configuration>
-            </execution>
-        </executions>
-    </plugin>
+        <plugin>
+            <!-- Build an executable JAR -->
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <classpathPrefix>lib/</classpathPrefix>
+                        <mainClass>src.main.java.MainRunner</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
         <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <version>3.0.0</version>
