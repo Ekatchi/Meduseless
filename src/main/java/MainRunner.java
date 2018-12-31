@@ -1,5 +1,7 @@
 import sx.blah.discord.api.ClientBuilder;
 import sx.blah.discord.api.IDiscordClient;
+import sx.blah.discord.handle.obj.ActivityType;
+import sx.blah.discord.handle.obj.StatusType;
 import sx.blah.discord.util.DiscordException;
 import sx.blah.discord.util.MessageBuilder;
 
@@ -79,7 +81,6 @@ public class MainRunner {
     {
         Random random = new Random();
         String[] status = {"With 0's and 1's", "With Literal Cancer","Circle Simulator 2018", "100% Salt Juice", "League of Legends: Game of the Year Edition", "with her sisters", "Degenerate Dredge", "Infernities in 2018", "with Prinz and Pals", "ＦＵＣＣ: The Game", "With Cardboard Stocks", "with the Bloodghast Brigade", "with the Amalgam-nation", "with the Nar-crew-moeba", "with actual stocks", "Waifu Simulator: Gun Edition", "Vengevine Turbo"};
-        client.changePlayingText(status[random.nextInt(16)]);
-    }
+        client.changePresence(StatusType.ONLINE, ActivityType.PLAYING, status[random.nextInt(16)]); }
     }
 
