@@ -42,11 +42,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainRunner.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="54" selection-start-column="54" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -80,6 +89,7 @@
         <option value="$PROJECT_DIR$/src/main/java/CommandHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainRunner.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -141,7 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546279018753" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546279811189" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -195,6 +205,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1233" height="868" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26001704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -269,6 +280,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" selection-start-column="54" selection-end-column="54" />
         </state>
       </provider>
     </entry>
