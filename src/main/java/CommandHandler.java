@@ -1,4 +1,3 @@
-import javafx.scene.paint.Color;
 import org.apache.commons.io.FileUtils;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
@@ -18,11 +17,13 @@ import sx.blah.discord.util.MissingPermissionsException;
 import sx.blah.discord.util.RequestBuffer;
 import sx.blah.discord.util.audio.AudioPlayer;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -637,21 +638,21 @@ public class CommandHandler  {
 				pingable = true;
 			}
 			try{
-				Color color = Color.valueOf(args.get(0));
+				Color color = Color.getColor(args.get(0));
 			}
 			catch (IllegalArgumentException A)
 			{
 				BotUtils.sendMessage(event.getChannel(), "Error: provided color value was not hexidecimal");
 			}
 			try {
-				Color color = Color.valueOf(args.get(0));
+				Color color = Color.getColor(args.get(0));
 				args.remove(0);
 				String rolename = args.toString();
 				rolename = rolename.substring(1, rolename.length() - 1);
 				rolename = rolename.replaceAll(",", "");
 				if (event.getGuild().getRolesByName(rolename).isEmpty()) {
 					EnumSet<Permissions> perms = event.getGuild().getRolesByName("@everyone").get(0).getPermissions();
-					java.awt.Color awtColor = new java.awt.Color((float) color.getRed(), (float) color.getGreen(), (float) color.getBlue(), (float) color.getOpacity());
+					java.awt.Color awtColor = new java.awt.Color((float) color.getRed(), (float) color.getGreen(), (float) color.getBlue());
 					event.getGuild().createRole().edit(awtColor, false, rolename, perms, pingable);
 					BotUtils.sendMessage(event.getChannel(), "Role " + rolename + " successfully made.");
 					event.getAuthor().addRole(event.getGuild().getRolesByName(rolename).get(0));
