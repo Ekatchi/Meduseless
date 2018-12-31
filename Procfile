@@ -1,1 +1,1 @@
-web: java -jar target/helloworld-jar-with-dependencies.jar
+web: java -jar target/Botkatchi-2.0.jar
