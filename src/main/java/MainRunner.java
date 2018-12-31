@@ -33,7 +33,7 @@ public class MainRunner {
 					try {
 						updateBotPresence(cli);
 						System.out.println("------------Updated--------------");
-					} catch (DiscordException e) {
+					} catch (Exception e) {
 						IDiscordClient thisclient = BotUtils.getBuiltDiscordClient(token);
 						thisclient.logout();
 						thisclient.login();
@@ -58,7 +58,7 @@ public class MainRunner {
 				try {
 					new MessageBuilder(cli).withChannel(channelID).withContent(message).build();
 					updateBotPresence(cli);
-				} catch (DiscordException e) {
+				} catch (Exception e) {
 					System.err.println("Message could not be sent with error: ");
 					e.printStackTrace();
 				}
@@ -67,7 +67,7 @@ public class MainRunner {
 				timer.schedule(hourlyTask, 0l, 1000 * 60 * 60);
 			}
 		}
-		catch (DiscordException e)
+		catch (Exception e)
 		{
 			System.out.println(e);
 		}
