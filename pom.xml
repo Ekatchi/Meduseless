@@ -75,7 +75,7 @@
                 </descriptorRefs>
                 <archive>
                     <manifest>
-                        <mainClass>MainRunner</mainClass>
+                        <mainClass>src.main.java.MainRunner</mainClass>
                     </manifest>
                 </archive>
             </configuration>
