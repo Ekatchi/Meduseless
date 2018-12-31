@@ -1,1 +1,1 @@
-web: java -jar target/Botkatchi-2.0-jar-with-dependencies.jar
+worker: java -jar target/Botkatchi-2.0-jar-with-dependencies.jar
