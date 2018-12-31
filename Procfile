@@ -1,1 +1,1 @@
-worker: java -jar target/helloworld-jar-with-dependencies.jar
+web: java -jar target/helloworld-jar-with-dependencies.jar
