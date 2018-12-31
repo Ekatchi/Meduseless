@@ -16,8 +16,7 @@ public class MainRunner {
 
     public static void main(String[] args) {
 		Scanner diddleboard = new Scanner(System.in);
-		//String token  = System.getenv("bot_token");
-		String token = args[0];
+		String token  = System.getenv("bot_token");
 		try {
 			IDiscordClient cli = BotUtils.getBuiltDiscordClient(token);
 			// Register a listener via the EventSubscriber annotation which allows for organisation and delegation of events
