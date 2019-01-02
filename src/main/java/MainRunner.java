@@ -9,8 +9,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by declan on 03/04/2017.
- * Used by Ka, last updated 11/02/2017.
+ * Used by Ka, last updated 1/02/2019.
  */
 public class MainRunner {
 
@@ -39,7 +38,7 @@ public class MainRunner {
 					}
 				}
 			};
-
+			timer.schedule(hourlyTask, 0l, 1000 * 60 * 60);
 			while (true) {
 	/*
             498171887080439838 < General chat for clownfiesta
@@ -62,7 +61,6 @@ public class MainRunner {
 				}
 
 
-				timer.schedule(hourlyTask, 0l, 1000 * 60 * 60);
 			}
 		}
 		catch (Exception e)
