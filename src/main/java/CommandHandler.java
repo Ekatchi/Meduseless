@@ -53,7 +53,7 @@ public class CommandHandler  {
 		commandMap.put("help", (event, args) -> {
 			EmbedBuilder builder = new EmbedBuilder();
 			builder.appendField("Garbage Meme Commands: ", "thinksphere\ndonger \nhappyday \nSMorcerer \n justanotherday", true);
-			builder.appendField("More Relevant Commands: ", "choose\necho\ncustomcommandadd\ncustomcommandlist\ncustomcommandremove\nroll\naddrole (mod/admin use)\nremoverole (mod/admin use)\nrequestrole (for self use)\nrelinquishrole (for self use) \nmyava \ntheirava \n customcolor", true);
+			builder.appendField("More Relevant Commands: ", "choose\necho\ncustomcommandadd\ncustomcommandlist\ncustomcommandremove\nroll\naddrole (mod/admin use)\nremoverole (mod/admin use)\nrequestrole (for self use)\nrelinquishrole (for self use) \nmyava \ntheirava", true);
 			builder.withAuthorName("Botkatchi");
 			builder.withAuthorIcon("http://i.imgur.com/fHSGYZg.png");
 			builder.withColor(200, 0, 0);
@@ -629,7 +629,7 @@ public class CommandHandler  {
 			String[] sitcoms = {"https://www.youtube.com/watch?v=Niu9Zmrx0p8", "https://www.youtube.com/watch?v=Ag1o3koTLWM", "https://www.youtube.com/watch?v=ay70lpWGpuQ", "https://www.youtube.com/watch?v=QVwr8lrQ2ww", "https://www.youtube.com/watch?v=_V2sBURgUBI"};
 			BotUtils.sendMessage(event.getChannel(), sitcoms[random.nextInt(sitcoms.length)]);
 		});
-        commandMap.put("customcolor", (event, args) ->{
+        /*commandMap.put("customcolor", (event, args) ->{
 			if(args.size() >= 2) {
         	boolean pingable = false;
         	if(args.get(args.size() - 1).equals("true"))
@@ -669,7 +669,7 @@ public class CommandHandler  {
 			else
 				BotUtils.sendMessage(event.getChannel(), "Error: Usage: -customcolor [hexidecimalvalue] [rolename] (true if pingable)");
 
-		});
+		});*/
 
 
          //An example embed block, use for building other ones.
