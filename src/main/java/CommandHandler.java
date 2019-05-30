@@ -791,7 +791,10 @@ public class CommandHandler  {
 			BotUtils.sendMessage(event.getGuild().getChannelsByName("general").get(0), event.getUser().getName() + " has successfully been given the FreezeStream role.");
 
 		}
+	 else
+	 {
         BotUtils.sendMessage(event.getGuild().getChannelsByName("general").get(0), "Welcome, " + event.getUser().mention() + ", to " + event.getGuild().getName() + "!");
+	 }
     }
 
     //When a user leaves a server, this message will be sent to the #general of that server.
