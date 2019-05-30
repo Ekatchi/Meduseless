@@ -781,6 +781,16 @@ public class CommandHandler  {
 
     public void onJoinEvent(UserJoinEvent event) throws Exception
     {
+    	//If the person is joining FreezeEx's server, give them the stream role, as per Freeze's request
+    	if(event.getGuild().getStringID().equals("315739435071307777"))
+		{
+			IRole FreezeStream = event.getGuild().getRolesByName("FreezeStream").get(0);
+			BotUtils.sendMessage(event.getGuild().getChannelsByName("general").get(0), "Welcome, " + event.getUser().mention() + ", to " + event.getGuild().getName() + "!");
+			Thread.sleep(1000);
+			event.getUser().addRole(FreezeStream);
+			BotUtils.sendMessage(event.getGuild().getChannelsByName("general").get(0), event.getUser().getName() + " has successfully been given the FreezeStream role.");
+
+		}
         BotUtils.sendMessage(event.getGuild().getChannelsByName("general").get(0), "Welcome, " + event.getUser().mention() + ", to " + event.getGuild().getName() + "!");
     }
 
